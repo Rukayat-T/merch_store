@@ -47,7 +47,6 @@ try {
 
 
         }
-    res.status(200).json("hello world")
     
 } catch (error) {
     console.log(error.message)
@@ -185,7 +184,7 @@ usersRouter.put('/:id', authorization, async (req, res) => {
            
             
             await userFromDb[0].save()
-            res.status(203).json(userFromDb)
+            res.status(202).json(userFromDb)
         }
         else{
             res.status(404).json('User not found')
@@ -213,7 +212,7 @@ usersRouter.delete('/:id', authorization, async (req, res) => {
                     id: id
                 }
             })
-            res.status(203).json('User Deleted')
+            res.status(200).json('User Deleted')
         }
         else{
             res.status(404).json('User not found')
