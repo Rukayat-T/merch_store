@@ -10,6 +10,7 @@ module.exports = async (req, res, next) => {
         else{
             const payload = jwt.verify(jwToken, process.env.jwtSecret)
             req.user_id = payload.user_id
+            
         }
         next()
     } catch (error) {

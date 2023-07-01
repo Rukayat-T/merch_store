@@ -16,5 +16,6 @@ app.listen(port, ()=>{
 })
 
 app.use('/users', require('./Routers/Authentication/UsersRouter'))
+app.use('/products', require('./Routers/Products/ProductsRouter'))
 
 
